@@ -15,7 +15,7 @@ fun! pymode#breakpoint#init() "{{{
 
         PymodePython << EOF
 
-from imp import find_module
+from importlib.util import find_spec as find_module
 
 for module in ('wdb', 'pudb', 'ipdb'):
     try:
